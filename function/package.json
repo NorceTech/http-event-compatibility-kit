@@ -1,0 +1,16 @@
+{
+  "name": "nc-http-event-compatibility",
+  "version": "1.0.0",
+  "description": "Norce [Storm] Event Compatibility kit",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^4.x"
+  }
+}

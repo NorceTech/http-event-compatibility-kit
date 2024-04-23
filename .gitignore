@@ -1,0 +1,8 @@
+.idea
+.env
+*.tfstate*
+*.hcl
+terraform/.terraform
+function/package-lock.json
+rbac.resp
+*.iml
