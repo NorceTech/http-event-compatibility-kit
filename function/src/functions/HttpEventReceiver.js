@@ -38,18 +38,12 @@ app.http('HttpEventReceiver', {
             const sender = sbClient.createSender(eventType);
             await sender.sendMessages({
                 applicationProperties: {
-                    norceEventType: eventType
+                    norceEventType: eventType,
+                    ClientId: body.ClientId
                 },
-                body, contentType: "application/json",
-                properties: {
-                    norceEventType: eventType
-                },
-                header: {
-                    norceEventType: eventType
-                }
+                body, contentType: "application/json"
             });
         } catch (e) {
-            context.log("In catch clause")
             context.error(e.message, e.stack, e)
             return {
                 status: 500,
