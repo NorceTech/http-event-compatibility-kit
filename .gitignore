@@ -7,4 +7,4 @@ terraform/.terraform
 function/package-lock.json
 rbac.resp
 *.iml
-**/*.iml
+function/*.iml
