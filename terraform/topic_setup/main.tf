@@ -1,6 +1,5 @@
 variable "name" {}
 variable "namespace_id" {}
-variable "key_vault_id" {}
 
 # Create the servicebus topic
 resource "azurerm_servicebus_topic" "topic" {
