@@ -88,7 +88,7 @@ resource "azurerm_service_plan" "sp_nc_compatibility_kit_function" {
 
 # Create the function app
 resource "azurerm_linux_function_app" "func_nc_compatibility_kit" {
-  name                = "func-${var.base_name}${var.customer_slug}"
+  name                = "func-${var.base_name}-${var.customer_slug}"
   resource_group_name = azurerm_resource_group.rg_nc_storm_compatibility.name
   location            = azurerm_resource_group.rg_nc_storm_compatibility.location
 

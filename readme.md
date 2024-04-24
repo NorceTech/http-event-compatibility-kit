@@ -32,3 +32,21 @@ A set of Terraform code to set up the infrastructure required:
 ### Azure function
 An Azure Function (node.js) which is used to receive HTTP Events from Norce Commerce and transmitting those HTTP
 Events to the ServiceBus which 
+
+## Installation
+- For Terraform see [Terraform Install](./terraform/readme.md).
+- For Azure Function see [Azure Function Install](./function/readme.md)
+
+## Usage
+To use the solution, go to the azure function created in the Azure Portal and click the `HttpEventReceiver`
+function, then click "Get Function Url" and copy the URL.
+
+Go into Norce Commerce Admin and click Integrations &rarr; Events &rarr; and select the event you to be triggered.
+For more information on how to [Configure Norce Commerce](https://docs.norce.io/developer-portal/system-integration/using-norceevent/)
+see documentation.
+
+> **_NOTE:_**  
+Use the Function Url as *Http Event Delivery Url* _and_ and a http header `x-norce-event-type` with 
+> the name of the event as value in one word, such as "CustomerChangedNotification".
+> 
+> You can also use a query parameter by appending `&norceEventType=CustomerChangedNotification` to the Function Url.
