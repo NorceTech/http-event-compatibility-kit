@@ -6,9 +6,10 @@ The purpose is to make migrations from Storm Commerce to Norce Commerce with les
 a simple template for how to consume HTTP Events from Norce Commerce.
 
 ### Version history
-|Version history|Change|Branch|
-|--|--|--|
-|1.0|Initial Release|`release/1.0.0`|
+| Version history | Change                | Branch          |
+|-----------------|-----------------------|-----------------|
+| 1.0.0           | Initial Release       | `release/1.0.0` |
+| 1.0.1           | Updated documentation | `release/1.0.1` |
 
 
 ## What it does
