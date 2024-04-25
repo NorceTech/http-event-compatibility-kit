@@ -5,6 +5,12 @@ backwards compatible with the Storm Commerce way of delivering events through an
 The purpose is to make migrations from Storm Commerce to Norce Commerce with less effort and risk as well as being
 a simple template for how to consume HTTP Events from Norce Commerce.
 
+### Version history
+|Version history|Change|Branch|
+|--|--|--|
+|1.0|Initial Release|`release/1.0.0`|
+
+
 ## What it does
 Events from Norce Commerce is delivered through HTTP Events to an Azure Function (`HttpEventReceiver`) and sends
 the http event to correct topics in an Azure Service Bus. Each topic have a subscription which can be used to
