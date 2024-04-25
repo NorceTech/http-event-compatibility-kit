@@ -17,9 +17,10 @@ data "azurerm_client_config" "current" {}
 
 variable "base_name" {
   type = string
-  default = "snecck"
+  default = "snceck"
+  description = "Abbreviation of the Storm/Norce Commerce Event Compatibility Kit, can be overridden by your own value"
   validation {
-    condition = length(var.base_name) < 10
+    condition = (length(var.base_name) < 10) && can(regex("[0-9A-Za-z]+", var.base_name))
     error_message = "Basename must be less than 10 characters and can only contain alphanumeric characters"
   }
 }
