@@ -1,7 +1,9 @@
 # Storm/Norce Event Compatibility Kit
 The Event Compatibility Kit is infrastructure (using Azure) and a function to make HTTP Events from Norce Commerce
-backwards compatible with the Storm way of delivering events through an Azure Service Bus.
+backwards compatible with the Storm Commerce way of delivering events through an Azure Service Bus.
 
+The purpose is to make migrations from Storm Commerce to Norce Commerce with less effort and risk as well as being
+a simple template for how to consume HTTP Events from Norce Commerce.
 
 ## What it does
 Events from Norce Commerce is delivered through HTTP Events to an Azure Function (`HttpEventReceiver`) and sends
@@ -18,7 +20,7 @@ doesn't need User Administration or Owner permissions).
 The Service Bus is designed with one topic per event type and one subscription per topic. This approach is chosen to
 allow different credentials (Shared Access Policies) for individual topics, depending on solution partner and/or
 external parties connecting to the service bus. The initial setup includes a general Shared Access Policy for the
-provided Azure function with `Send` permissions and Shared Access Policy with reader permissions which can be used in
+provided Azure function with `Send` permissions and Shared Access Policy with `Read` permissions which can be used in
 your code (it's only for convenience).
 
 ## What it contains
